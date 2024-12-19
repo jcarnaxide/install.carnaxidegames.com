@@ -3,7 +3,7 @@ const gamesMetadata = {
     knight_adventure: {
         title: "Knight Adventure",
         description: "A fun and engaging platformer game developed by Carnaxide Games.",
-        image: `${baseUrl}/assets/knight_adventure_icon.png`,
+        image: "https://install.carnaxidegames.com/assets/knight_adventure_icon.png",
         urls: {
             android: "https://play.google.com/store/apps/details?id=com.carnaxide_games.knight_adventure",
             ios: "https://www.apple.com",
@@ -14,7 +14,7 @@ const gamesMetadata = {
     puzzle: {
         title: "Carnaxide Games Puzzle Adventure",
         description: "Relax and unwind with our Nature Exploration puzzle game.",
-        image: `${baseUrl}/assets/knight_adventure_icon.png`,
+        image: "https://install.carnaxidegames.com/assets/knight_adventure_icon.png",
         urls: {
             android: "https://play.google.com/store/apps/details?id=com.carnaxide_games.knight_adventure",
             ios: "https://www.apple.com",
