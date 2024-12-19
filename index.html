@@ -4,47 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
-    <script>
-        // Game-specific store links
-        const gameLinks = {
-            "knight-adventure": {
-                android: "https://play.google.com/store/apps/details?id=com.carnaxide_games.knight_adventure",
-                ios: "https://apps.apple.com/app/id123456789",
-            },
-            "future-game": {
-                android: "https://play.google.com/store/apps/details?id=com.carnaxide_games.future_game",
-                ios: "https://apps.apple.com/app/id987654321",
-            },
-        };
-
-        function redirectToStore() {
-            // Parse query parameters from URL
-            const params = new URLSearchParams(window.location.search);
-            const game = params.get("game"); // e.g., ?game=knight-adventure
-
-            if (game && gameLinks[game]) {
-                const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-                if (/android/i.test(userAgent)) {
-                    // Redirect Android users
-                    window.location.href = gameLinks[game].android;
-                } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                    // Redirect iOS users
-                    window.location.href = gameLinks[game].ios;
-                } else {
-                    // Fallback for unsupported devices
-                    window.location.href = "https://www.carnaxidegames.com/games";
-                }
-            } else {
-                // Fallback for unknown game
-                window.location.href = "https://www.carnaxidegames.com/games";
-            }
-        }
-
-        redirectToStore();
-    </script>
+    <script src="redirect.js" defer></script>
 </head>
 <body>
-    <p>Redirecting to the correct app store...</p>
+    <p>Redirecting to your game...</p>
 </body>
 </html>
