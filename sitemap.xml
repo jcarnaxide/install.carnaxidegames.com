@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://install.carnaxidegames.com/games/knight_adventure</loc>
+        <lastmod>2024-12-27</lastmod>
+        <changefreq>montly</changefreq>
+    </url>
+    <url>
+        <loc>https://install.carnaxidegames.com/games/battle_shape</loc>
         <lastmod>2025-11-06</lastmod>
         <changefreq>montly</changefreq>
     </url>
