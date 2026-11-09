@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /public/scripts/
 Disallow: /public/images/
+Disallow: /updates/
 Allow: /
 Sitemap: https://install.carnaxidegames.com/sitemap.xml
