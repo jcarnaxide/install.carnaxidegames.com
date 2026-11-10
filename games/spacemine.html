@@ -17,13 +17,14 @@
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Android goes straight to Play; everyone else stays on this page until
-         the App Store listing exists, then add ios to gameLinks. -->
+    <!-- Phones go straight to their store; everyone else stays on this page. -->
     <script src="/public/scripts/redirect.js"></script>
     <script>
         const PLAY_URL = "https://play.google.com/store/apps/details?id=com.carnaxide_games.spacemine";
-        if (detectPlatform() === "android") {
-            redirectToPlatform({ android: PLAY_URL });
+        const APP_STORE_URL = "https://apps.apple.com/us/app/rockhopper-space-miner/id6831621115";
+        const platform = detectPlatform();
+        if (platform === "android" || platform === "ios") {
+            redirectToPlatform({ android: PLAY_URL, ios: APP_STORE_URL });
         }
     </script>
 
@@ -54,7 +55,7 @@
             font-weight: 600; font-size: 18px; padding: 14px 28px; border-radius: 12px;
         }
         .play:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
-        .soon { color: var(--muted); font-size: 15px; margin-top: 16px; }
+        .stores { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
         footer { color: var(--muted); font-size: 13px; margin-top: 40px; }
         footer a { color: inherit; }
     </style>
@@ -66,8 +67,10 @@
         <h1>Rockhopper</h1>
         <p class="tag">Space Miner</p>
         <p class="sub">Space mining in 3D: fly the belt, crack asteroids for crystals, build your ship.</p>
-        <a class="play" href="https://play.google.com/store/apps/details?id=com.carnaxide_games.spacemine">Get it on Google Play</a>
-        <p class="soon">Coming soon to iPhone.</p>
+        <div class="stores">
+            <a class="play" href="https://apps.apple.com/us/app/rockhopper-space-miner/id6831621115">Download on the App Store</a>
+            <a class="play" href="https://play.google.com/store/apps/details?id=com.carnaxide_games.spacemine">Get it on Google Play</a>
+        </div>
         <footer>By <a href="https://www.carnaxidegames.com/">Carnaxide Games</a></footer>
     </main>
 </body>
